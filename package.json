@@ -1,0 +1,39 @@
+{
+  "name": "root",
+  "private": true,
+  "author": "Jarosław Frydrych <jarek.frydrych@gmail.com>",
+  "workspaces": {
+    "packages": [
+      "packages/apps/*",
+      "packages/shared",
+      "packages/storybook"
+    ],
+    "nohoist": [
+      "**/webpack-dev-server",
+      "**/babel-loader"
+    ]
+  },
+  "scripts": {
+    "del-dist": "lerna exec --parallel -- del-cli dist",
+    "prebuild": "yarn del-dist",
+    "build": "lerna exec --scope @project/shared -- tsc",
+    "start": "cd packages/apps/sample-app && yarn start",
+    "storybook": "cd packages/shared && yarn storybook",
+    "build-storybook": "cd packages/storybook && yarn build-storybook",
+    "format": "prettier --print-width 80 --tab-width 4 --single-quote --write 'packages/*/src/**/{*.js,*.ts*}'",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "lerna": "^3.15.0",
+    "del-cli": "^1.1.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.2",
+    "prettier": "^1.11.1"
+  },
+  "lint-staged": {
+    "*.ts*": [
+      "prettier --print-width 80 --tab-width 4 --single-quote --write",
+      "git add"
+    ]
+  }
+}

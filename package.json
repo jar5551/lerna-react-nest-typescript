@@ -23,20 +23,10 @@
     "frontend/sample-app": "cd packages/frontend/sample-app && yarn start",
     "storybook": "cd packages/storybook && yarn storybook",
     "build-storybook": "cd packages/storybook && yarn build-storybook",
-    "format": "prettier --print-width 80 --tab-width 4 --single-quote --write 'packages/*/src/**/{*.js,*.ts*}'",
-    "precommit": "lint-staged"
+    "format": "prettier --print-width 80 --tab-width 4 --single-quote --write 'packages/*/src/**/{*.js,*.ts*}'"
   },
   "devDependencies": {
     "lerna": "^3.15.0",
-    "del-cli": "^1.1.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.2",
-    "prettier": "^1.11.1"
-  },
-  "lint-staged": {
-    "*.ts*": [
-      "prettier --print-width 80 --tab-width 4 --single-quote --write",
-      "git add"
-    ]
+    "del-cli": "^1.1.0"
   }
 }

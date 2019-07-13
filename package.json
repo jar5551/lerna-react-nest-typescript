@@ -4,9 +4,10 @@
   "author": "Jarosław Frydrych <jarek.frydrych@gmail.com>",
   "workspaces": {
     "packages": [
-      "packages/apps/*",
+      "packages/frontend/*",
       "packages/shared",
-      "packages/storybook"
+      "packages/storybook",
+      "packages/backend"
     ],
     "nohoist": [
       "**/webpack-dev-server",
@@ -17,8 +18,10 @@
     "del-dist": "lerna exec --parallel -- del-cli dist",
     "prebuild": "yarn del-dist",
     "build": "lerna exec --scope @project/shared -- tsc",
-    "start": "cd packages/apps/sample-app && yarn start",
-    "storybook": "cd packages/shared && yarn storybook",
+    "start": "cd packages/backend && yarn start",
+    "backend": "cd packages/backend && yarn start:dev",
+    "frontend/sample-app": "cd packages/frontend/sample-app && yarn start",
+    "storybook": "cd packages/storybook && yarn storybook",
     "build-storybook": "cd packages/storybook && yarn build-storybook",
     "format": "prettier --print-width 80 --tab-width 4 --single-quote --write 'packages/*/src/**/{*.js,*.ts*}'",
     "precommit": "lint-staged"

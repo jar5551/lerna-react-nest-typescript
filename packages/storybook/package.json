@@ -1,5 +1,6 @@
 {
   "name": "@project/storybook",
+  "description": "This is storybook for shared frontend components",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Jarosław Frydrych <jarek.frydrych@gmail.com>",

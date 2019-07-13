@@ -1,8 +1,8 @@
 {
   "name": "@project/shared",
-  "description": "Shared components",
+  "description": "Shared frontend components",
   "version": "1.0.0",
-  "author": "Jarosław Frydrych",
+  "author": "Jarosław Frydrych <jarek.frydrych@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",

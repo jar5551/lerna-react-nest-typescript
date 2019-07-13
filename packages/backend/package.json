@@ -1,8 +1,8 @@
 {
   "name": "@project/backend",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "This is backend application",
+  "author": "Jarosław Frydrych <jarek.frydrych@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
